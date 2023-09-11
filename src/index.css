@@ -77,7 +77,7 @@
         @apply bg-gradient-to-r text-transparent bg-clip-text from-orange-700 to-pink-200 font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3] ;
     }
     .text-gradientt {
-        @apply bg-gradient-to-r text-transparent bg-clip-text from-black to-green-500 font-bold font-primary hover:from-[#11e62e] hover:to-[#eb089f] ;
+        @apply bg-gradient-to-r text-transparent bg-clip-text tracking-wider from-red-500  to-black  font-semibold font-manik hover:from-[#11e62e] hover:to-[#eb089f] ;
     }
     .section {
        @apply py-8 lg:py-24 lg:h-screen flex items-center  
