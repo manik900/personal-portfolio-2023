@@ -3,7 +3,7 @@
 export default {
   mode: "jit",
   purge: [
-    "./src/**/*.{html,jsx}"
+    "./src/**/*.{html,jsx,js,css}"
   ],
   darkMode:'media',
   content: [

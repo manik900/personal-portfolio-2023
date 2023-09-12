@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+ 
   "scripts": {
     "start": "vite",
     "build": "tailwindcss -i ./src/index.css -o ./output/style.min.css --minify",
@@ -10,6 +11,8 @@
     "dev": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+   
+
   },
   "dependencies": {
     "framer-motion": "^10.15.0",
