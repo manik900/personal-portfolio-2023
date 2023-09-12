@@ -1,7 +1,7 @@
 
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
+import {AiOutlineMenuUnfold, AiOutlineClose} from 'react-icons/ai';
 import { useState } from 'react';
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
       {
         toggle ?
 
-        <AiOutlineMenu onClick={() => setToggle(!toggle)} className='text-2xl md:hidden block' />
+        <AiOutlineMenuUnfold onClick={() => setToggle(!toggle)} className='text-2xl md:hidden block' />
         :
          <AiOutlineClose onClick={() => setToggle(!toggle)}  className='text-2xl md:hidden block' />
       }

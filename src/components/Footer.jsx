@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { AiFillFacebook,AiFillYoutube, AiFillGithub, } from 'react-icons/ai';
-import img from "../img/manik.jpg";
+import Img from "../img/Manik.png";
 
 const Footer = () => {
   return (
@@ -43,7 +43,7 @@ const Footer = () => {
       </div>
      <div className='flex pt-5'>
      <p className='text-center mt-4  ml-16 md:ml-60'>copyed by- <span className='text-gradientt'>Manik Hasan </span></p>
-<img className='w-16 h-16 rounded-full ml-2' src={img} />
+<img className='w-16 h-16 rounded-full ml-2' src={Img} />
      </div>
     </div>
   )
