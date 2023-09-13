@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "http://manik900.github.io/react-app-2024",
+
  
   "scripts": {
     "start": "vite",
@@ -10,7 +12,9 @@
     "watch": "tailwindcss -i ./src/index.css -o ./output/style.min.css --watch",
     "dev": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
    
 
   },
