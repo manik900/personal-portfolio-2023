@@ -1,51 +1,70 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { AiFillFacebook,AiFillYoutube, AiFillGithub, } from 'react-icons/ai';
-import Img from "../img/Manik.png";
+//import data
+import {footer} from "../data"
+//import components
+import  Copyright  from '../components/Copyright';
 
 const Footer = () => {
+  //destructure footer data
+  const {logo, links, newsletter, form } =footer;
   return (
-    <div className='py-[120px] bg-[#2699fb]'>
-      <div className='max-w-[1240px] md:mx-auto md:max-w-[90%] flex flex-col md:flex-row'>
-      <div className='text-black md:max-w-[40%] px-5'>
-            <h1 className='text-start text-xl text-gradientt'>M.H Technology</h1>
-            <p className='text-start mt-5 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, fugit quam aperiam maxime id doloremque adipisci.</p>
-            <div className='flex gap-x-5 text-4xl text-red-500 mt-5'>
-     <AiFillFacebook />
-     <AiFillYoutube />
-      <AiFillGithub />
-      
-            </div>
-      </div>
-{/* footer section */}
-
-  <div className='flex mt-5 md:mt-0'>
-  <div className='text-black px-16'>
-            <h1 className='text-gradientt '>Solutions</h1>
-            <ul className='mt-6'>
-                  <li>Analysis</li>
-<li>Marketing</li>
-<li>Communication</li>
-           <li>Investigation</li>       
-            </ul>
-      </div>
-      <div className='text-black px-16 '>
-             <h1 className='text-gradientt'>Support</h1>
-            <ul className='mt-6'>
-                  <li>Analysis</li>
-            <li>Marketing</li>
-            <li>Team</li>
-           <li>Projects</li>       
-            </ul>  
-      </div>
+    <footer className='pt-[10rem] pb-[5rem] bg-black/70 text-white'>
+<div className='container mx-auto'>
+<div className='flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left lg:justify-between gap-y-8'>
+  {/* logo */}
+  <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="300">
+    <img src={logo} alt="" />
   </div>
-   
-      </div>
-     <div className='flex pt-5'>
-     <p className='text-center mt-4  ml-16 md:ml-60'>copyed by- <span className='text-gradientt'>Manik Hasan </span></p>
-<img className='w-16 h-16 rounded-full ml-2' src={Img} />
-     </div>
+  {/* list 1*/}
+  <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="500">
+    <div className='text-2xl uppercase font-medium mb-6'>Links</div>
+    <ul className='flex flex-col gap-y-3'>
+      { links.map((item, index) =>{
+        //destructure item
+        const {href, name}=item;
+        return(
+          <li key={index}>
+            <a className="font-medium hover:text-accent transition" href={href}>{name}</a>
+          </li>
+        )
+      }) }
+    </ul>
+  </div>
+
+    {/* list 2*/}
+  <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="700">
+    <div className='text-2xl uppercase font-medium mb-6'>Legal</div>
+    <ul className='flex flex-col gap-y-3'>
+      { links.map((item, index) =>{
+        //destructure item
+        const {href, name}=item;
+        return(
+          <li key={index}>
+            <a className="font-medium hover:text-accent transition" href={href}>{name}</a>
+          </li>
+        )
+      }) }
+    </ul>
+  </div>
+{/* newsletter */}
+<div className=""data-aos="fade-up" data-aos-offset="200" data-aos-delay="900" >
+  <div className='text-2xl uppercase font-medium mb-6'>{newsletter.title}</div>
+  <div className='text-xl text-light mb-[18px]'>{newsletter.subtitle}</div>
+  {/* form */}
+  <form className="bg-green-400 max-w-[350px] mb-[10px] rounded-lg">
+    <div className='h-[62px] p-[7px] flex border border-dark rounded-lg'>
+      <input className='w-full h-full pl-6 border-none outline-none placeholder:text-dark/@' type="text" placeholder={form.placeholder} />
+      <button className='btn btn-sm bg-accent hover:bg-accentHover w-[102px] text-white'>{form.btnText}</button>
     </div>
+  </form>
+  <span className='text-sm text-light'>{form.smallText}</span>
+</div>
+</div>
+<hr className='mt-10 mb-5' data-aos="fade-up" data-aos-offset="200" data-aos-delay="700" />
+<Copyright />
+</div>
+    </footer>
   )
 }
 

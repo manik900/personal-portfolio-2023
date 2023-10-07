@@ -2,86 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .btn {
-        background: linear-gradient(
-            92.23deg,
-            #ff56f6 21.43%,
-            #b936ee 50.63%,
-            #3bace2 100%,
-            #406aff 117.04%, 
-        );
-        box-shadow: 0px 4.4218px 107.23px rgba(255, 86, 246, 0.51);
-    }
-    .btnn {
-      @apply  bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-full px-3 py-0 text-[0.7rem]
-    }
-    .bttn {
-      @apply  bg-gradient-to-r from-red-500 from-10% via-pink-500 via-30% to-orange-500 to-90% rounded-full  text-[0.7rem] w-9 h-9 mb-[10px] flex justify-center items-center
-    }
-    .btn:hover {
-        background: linear-gradient(
-            92.23deg,
-            #406aff 21.43%,
-            #3bace2 50.63%,
-            #b936ee 100%,
-            #ff56f6 117.04%, 
-        );
-        box-shadow: 0px 4.4218px 107.23px rgba(255, 86, 246, 0.51);
-    }
-    .gradient,
-    .active
-      {
-        background: linear-gradient(
-            92.23deg,
-            #406aff 21.43%,
-            #3bace2 50.63%,
-            #b936ee 100%,
-            #ff56f6 117.04%, 
-        );
-    }
-    .active {
-        color:#110311;
-       
-        }
-   .active {
-    @apply  bg-gradient-to-r from-blue-500 from-10% via-sky-600 via-30% via-amber-500 via-40% to-emerald-400 to-90%
-   }
-
-    
-}
-
 @layer base {
-    body {
-        @apply font-secondary text-lg leading-8 text-white 
-    }
-    .h2 {
-        @apply font-secondary text-[32px] mb-6 tracking-[10%] uppercase
-    }
-    .h3 {
-        @apply font-primary font-semibold text-[26px]  leading-[20px]
-    }
-    .btn {
-        @apply rounded-full font-primary text-white font-medium 
-    }
-    .btn-sm {
-        @apply h-[48px] px-7 text-sm;
-    }
-    .btn-lg {
-        @apply h-[56px] px-10 text-base;
-    }
-    .btn-link {
-        @apply text-base;
-    }
-    .text-gradient {
-        @apply bg-gradient-to-r text-transparent bg-clip-text from-orange-700 to-pink-200 font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3] ;
-    }
-    .text-gradientt {
-        @apply bg-gradient-to-r text-transparent bg-clip-text tracking-wider from-red-500  to-black  font-semibold font-manik hover:from-[#11e62e] hover:to-[#eb089f] ;
-    }
-    .section {
-       @apply py-8 lg:py-24 lg:h-screen flex items-center  
-    }
-
-    
+  body {
+    @apply font-primary text-lg;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-dark;
+  }
+  .title,
+  .section-title {
+    @apply text-6xl lg:text-8xl mb-6 font-bold;
+  }
+  .h2 {
+    @apply text-5xl lg:text-7xl font-bold;
+  }
+  .pretitle {
+    @apply text-lg lg:text-[22px] text-light mb-4 lg:mb-6 uppercase font-normal;
+  }
+  .lead {
+    @apply text-2xl text-light font-normal mb-6;
+  }
+  .link {
+    @apply text-lg text-dark;
+  }
+  .section {
+    @apply py-8 lg:py-[142px];
+  }
+  .btn {
+    @apply rounded-lg transition flex justify-center items-center;
+  }
+  .btn-lg {
+    @apply h-[75px] px-6 text-2xl font-normal;
+  }
+  .btn-md {
+    @apply h-[60px] px-[16px] text-lg font-normal;
+  }
+  .btn-sm {
+    @apply h-[48px] px-[16px] text-lg font-normal;
+  }
+  .btn-accent {
+    @apply text-white bg-accent hover:bg-accentHover;
+  }
+  .btn-white {
+    @apply text-accent bg-white hover:bg-white/90;
+  }
+  .btn-outline {
+    @apply bg-transparent text-accent border border-accent hover:bg-accent hover:text-white;
+  }
+  .btn-link {
+    @apply text-accent text-xl lg:text-2xl;
+  }
 }

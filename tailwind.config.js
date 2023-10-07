@@ -2,9 +2,7 @@
 
 export default {
   mode: "jit",
-  purge: [
-    "./src/**/*.{html,jsx,js,css}"
-  ],
+ 
   darkMode:'media',
   content: [
     "./index.html",
@@ -18,26 +16,32 @@ export default {
       lg: "900px",
       xl: "1200px"
       }, 
-fontFamily: {
-  primary: 'Orbitron',
-  secondary: 'Rajdhani',
-  tertiary: 'Aldrich',
-  manik: 'Russo One'
-},
+      fontFamily: {
+        primary: 'Hind Siliguri',
+      },
 container: {
-  DEFAULT:'15px',
+  padding: {
+    DEFAULT: '1rem' ,
+    lg:'2rem',
+  }
 },
 extend: {
+  colors: {
+    dark: '#292830',
+    light: '#BDBDBD',
+    accent: '#FF7235',
+    accentHover: '#e05216',
+    grey: '#F5F5F5',
+  },
+  backgroundImage: {
+    overview: "url('/src/assets/img/overview/bg.svg')",
+    cta: "url('/src/assets/img/cta/bg.svg')",
+  },
 
-colors: {
-  primary: '#0a0a0a',
-  accent: '#B809C3',
+boxShadow :{
+1: '0px 4px 30px rgba(0,0,0,0.08)'
 },
-backgroundImage: {
-   site: "url('./img/banner.jpg)",
- about: "url(./img/jjj.jpg)",
 
-}
 
 }}
   
